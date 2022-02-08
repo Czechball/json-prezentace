@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ovoce a zelenina</title>
+	<link rel="stylesheet" type="text/css" href="zelenina.css">
+</head>
+<body>
+	<header>
+		
+	</header>
+
+	<section>
+		
+	</section>
+
+	<script type="text/javascript">
+		async function zobrazit() {
+			const requesturl = 'https://slides.zonc.eu/zelenina.json';
+			const request = new Request(requesturl);
+
+			const response = await fetch(request);
+			const ovoceazelenina = await response.json();
+
+			//const ovoceazelenina= require(['./zelenina.json'], function (zelenina)
+
+			zobrazNadpis(ovoceazelenina);
+			zobrazInfo(ovoceazelenina);
+		}
+
+
+		function zobrazNadpis(obj) {
+				const nadpis = document.querySelector('header');
+				const mujH1 = document.createElement('h1');
+
+				mujH1.textContext = obj['typ'];
+				nadpis.appendChild(mujH1);
+
+				const mujPara = document.createElement('p');
+				mujPara.textContext = `chut: ${obj['chut']}`;
+				nadpis.appendChild(mujPara);
+		}
+
+		function zobrazInfo(obj) {
+			const section = document.querySelector('section');
+			const jidla = obj['priklady'];
+
+			for (const jidlo of jidla) {
+				const mujArticle = document.createElement('article');
+				const mujH2 = document.createElement('h2');
+				const mujPara1 = document.createElement('p');
+				const mujPara2 = document.createElement('p');
+				const mujPara3 = document.createElement('p');
+				const mujSeznam = document.createElement('ul');
+
+				mujH2.textContext = jidlo.jmeno;
+				mujPara1.textContext = `Obrázek: ${jidlo.obrázek}`;
+				mujPara2.textContext = 'Recepty:';
+
+				const recepty = jidlo.recepty;
+				for (const recept of recepty) {
+					const seznamKus = document.createElement('li');
+					seznamKus.textContext = recept;
+					mujSeznam.appendChild(seznamKus);
+				}
+
+				mujArticle.appendChild(mujH2);
+				mujArticle.appendChild(mujPara1);
+				mujArticle.appendChild(mujPara2);
+				mujArticle.appendChild(mujSeznam);
+
+				section.appendChild(mujArticle);
+			}
+		}
+
+		zobrazit();
+	</script>
+</body>
+</html>
