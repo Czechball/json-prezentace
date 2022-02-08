@@ -1,0 +1,43 @@
+{
+	"typ": "Zelenina",
+	"chuť": "skvělá",
+	"příklady": [
+		{
+			"jméno": "Mrkev",
+			"obrázek": "https://www.rohlik.cz/cdn-cgi/image/f=auto,w=500,h=500/https://cdn.rohlik.cz/images/grocery/products/1325993/1325993-1542963378.jpg",
+			"recepty": [
+				"Mrkvový dort",
+				"Mrkvové placky"
+			]
+		},
+		{
+			"jméno": "Celer",
+			"obrázek": "https://cdn.awashop.cz/data/user-content/awa_celer.jpg",
+			"recepty": [
+				"Smažený celer",
+				"Celerová polévka s houbami"
+			]
+		}
+	],
+	"typ": "Ovoce",
+	"chuť": "výborná",
+	"příklady": [
+		{
+			"jméno": "Jablko",
+			"obrázek": "https://www.mydlovysvet.cz/1363/zelene-jablko-10ml-parfem-do-kosmetiky-mydla-a-svicek.jpg",
+			"recepty": [
+				"Jablečný koláč",
+				"Jablečný závin"
+			]
+		},
+		{
+			"jméno": "Švestka",
+			"obrázek": "https://prima-receptar.cz/wp-content/uploads/2014/05/svestky.jpg",
+			"recepty": [
+				"Švestkový koláč",
+				"Švestkové knedlíky",
+				"Povidla"
+			]
+		}
+	]
+}
