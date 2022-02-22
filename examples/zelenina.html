@@ -35,11 +35,11 @@
 				const nadpis = document.querySelector('header');
 				const mujH1 = document.createElement('h1');
 
-				mujH1.textContext = obj['typ'];
+				mujH1.textContent = obj['typ'];
 				nadpis.appendChild(mujH1);
 
 				const mujPara = document.createElement('p');
-				mujPara.textContext = `chut: ${obj['chut']}`;
+				mujPara.textContent = `chut: ${obj['chut']}`;
 				nadpis.appendChild(mujPara);
 		}
 
@@ -55,14 +55,14 @@
 				const mujPara3 = document.createElement('p');
 				const mujSeznam = document.createElement('ul');
 
-				mujH2.textContext = jidlo.jmeno;
-				mujPara1.textContext = `Obrázek: ${jidlo.obrázek}`;
-				mujPara2.textContext = 'Recepty:';
+				mujH2.textContent = jidlo.jmeno;
+				mujPara1.textContent = `Obrázek: ${jidlo.obrazek}`;
+				mujPara2.textContent = 'Recepty:';
 
 				const recepty = jidlo.recepty;
 				for (const recept of recepty) {
 					const seznamKus = document.createElement('li');
-					seznamKus.textContext = recept;
+					seznamKus.textContent = recept;
 					mujSeznam.appendChild(seznamKus);
 				}
 
