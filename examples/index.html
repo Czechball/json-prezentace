@@ -1,0 +1,37 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<script type="text/javascript">
+				// query parameter in url
+				var qs = (function(a) {
+				    if (a == "") return {};
+				    var b = {};
+
+				    for (var i = 0; i < a.length; ++i)
+				    {
+				        var p=a[i].split('=', 2);
+				        if (p.length == 1)
+				            b[p[0]] = "";
+				        else
+				            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+				    }
+
+				    return b;
+				})(window.location.search.substr(1).split('&'));
+
+				// xhr request to backend
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.open("POST", "fetch_data.php", true);
+				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				xmlhttp.onreadystatechange = function() {
+				    if (this.readyState === 4 || this.status === 200){ 
+				    	let jsObject = JSON.parse(this.response);
+				    	console.log(jsObject);
+				    }       
+				};
+				xmlhttp.send("db_table=" + qs["db_table"]);
+		</script>
+	</body>
+</html>
