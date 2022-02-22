@@ -18,26 +18,5 @@
 				"Celerová polévka s houbami"
 			]
 		}
-	],
-	"typ": "Ovoce",
-	"chut": "výborná",
-	"priklady": [
-		{
-			"jmeno": "Jablko",
-			"obrazek": "https://www.mydlovysvet.cz/1363/zelene-jablko-10ml-parfem-do-kosmetiky-mydla-a-svicek.jpg",
-			"recepty": [
-				"Jablečný koláč",
-				"Jablečný závin"
-			]
-		},
-		{
-			"jmeno": "Švestka",
-			"obrazek": "https://prima-receptar.cz/wp-content/uploads/2014/05/svestky.jpg",
-			"recepty": [
-				"Švestkový koláč",
-				"Švestkové knedlíky",
-				"Povidla"
-			]
-		}
 	]
 }
